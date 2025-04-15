@@ -8,7 +8,7 @@ export const ZKsync = () => {
         src={staticFile("zksync.png")}
         style={{ width: "150px", height: "150px", marginLeft: "10px" }}
       />
-      <Title titleText="ZKsync" titleColor="black" fontSize={120} />
+      <Title titleText="ZKsync" titleColor="white" fontSize={120} />
     </div>
   );
 };

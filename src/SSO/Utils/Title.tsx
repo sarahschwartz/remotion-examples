@@ -4,7 +4,7 @@ import { spring, useCurrentFrame, useVideoConfig } from "remotion";
 const word = {
   marginBottom: 10,
   display: "inline-block",
-  background: 'rgba(255, 255, 255, 0.1)',
+  // background: 'rgba(255, 255, 255, 0.1)',
   padding: '4px 8px',
   borderRadius: '8px',
 };
@@ -14,9 +14,10 @@ interface TitleProps {
   readonly titleColor: string;
   readonly fontSize?: number;
   readonly styles?: CSSProperties;
+  readonly addDelay?: number;
 }
 
-export const Title = ({ titleText, titleColor, fontSize, styles }: TitleProps) => {
+export const Title = ({ titleText, titleColor, fontSize, styles, addDelay = 0}: TitleProps) => {
   const videoConfig = useVideoConfig();
   const frame = useCurrentFrame();
 
@@ -32,7 +33,7 @@ export const Title = ({ titleText, titleColor, fontSize, styles }: TitleProps) =
   return (
     <div className="inter-400" style={title}>
       {words.map((t, i) => {
-        const delay = i * 5;
+        const delay = i * 5 + addDelay;
 
         const scale = spring({
           fps: videoConfig.fps,

@@ -3,6 +3,8 @@ import "./styles.css";
 import { FPS } from "./constants";
 import { ShortsVertical } from "./ShortsVertical";
 import { SSO } from "./SSO";
+import { SSOCronos } from "./SSOCronos";
+import { ZKGame } from "./ZKGame";
 
 export const RemotionRoot = () => {
   const shortMin = 0;
@@ -11,8 +13,22 @@ export const RemotionRoot = () => {
   const ssoMin = 2;
   const ssoSeconds = (60 * ssoMin) + 2;
 
+  const ssoCronosMin = 2;
+  const ssoCronosSeconds = (60 * ssoCronosMin) + 16;
+
+  const gameMin = 0;
+  const gameSeconds = (60 * gameMin) + 57;
+
   return (
     <div>
+      <Composition
+        id="ZKGame"
+        component={ZKGame}
+        durationInFrames={FPS * gameSeconds}
+        fps={FPS}
+        width={2000}
+        height={1600}
+      />
       <Composition
         id="ShortsVertical"
         component={ShortsVertical}
@@ -25,6 +41,14 @@ export const RemotionRoot = () => {
         id="SSO"
         component={SSO}
         durationInFrames={FPS * ssoSeconds}
+        fps={FPS}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="SSOCronos"
+        component={SSOCronos}
+        durationInFrames={FPS * ssoCronosSeconds}
         fps={FPS}
         width={1920}
         height={1080}

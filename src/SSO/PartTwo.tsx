@@ -45,7 +45,7 @@ export const PartTwo = ({ startTime, duration }: PartTwoProps) => {
       <SpendingLimit frame={frame} fps={fps} startTime={startTime + (240 * FPSFactor)} duration={210 * FPSFactor} />
 
       {/* Code */}
-      <Icons
+      {/* <Icons
         sequenceName="Code Icon"
         images={["code.svg"]}
         imageStyles={{
@@ -58,7 +58,7 @@ export const PartTwo = ({ startTime, duration }: PartTwoProps) => {
         duration={42 * FPSFactor}
         frame={frame}
         fps={fps}
-      />
+      /> */}
 
     </>
   );

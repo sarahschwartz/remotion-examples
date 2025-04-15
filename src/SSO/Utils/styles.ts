@@ -4,7 +4,7 @@ export const bigBlueButton = {
   width: "400px",
   height: "150px",
   fontSize: "60px",
-  background: "#4615f8",
+  background: "rgb(23, 85, 244)",
   color: "white",
 } as CSSProperties;
 

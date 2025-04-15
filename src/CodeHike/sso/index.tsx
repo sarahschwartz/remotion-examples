@@ -42,7 +42,7 @@ function Video({ steps, startTime }: VideoProps) {
         <AbsoluteFill style={{ backgroundColor: "#0D1117" }}>
           <ProgressBar steps={steps} />
         </AbsoluteFill>
-        <AbsoluteFill
+        {/* <AbsoluteFill
           style={{
             display: "flex",
             justifyContent: "flex-end",
@@ -54,7 +54,7 @@ function Video({ steps, startTime }: VideoProps) {
             src={staticFile("covershot.png")}
             style={{ width: imgSize, height: imgSize }}
           />
-        </AbsoluteFill>
+        </AbsoluteFill> */}
       </Sequence>
       {steps.map((step, index) => {
         const thisDuration = step.duration * FPSFactor;

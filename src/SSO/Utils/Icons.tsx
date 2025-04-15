@@ -7,7 +7,7 @@ interface IconsProps {
   readonly duration: number;
   readonly containerStyles?: React.CSSProperties;
   readonly imageStyles?: React.CSSProperties;
-  readonly translate?: { x: number; y: number };
+  readonly translate?: { x: number; y: number, startTime?: number };
   readonly frame: number;
   readonly fps: number;
   readonly spinIcons?: boolean | boolean[];
@@ -58,8 +58,9 @@ export const Icons = ({
 
           let translateValue;
           if (translate) {
+            const translateDelay = translate.startTime || 20;
             translateValue = spring({
-              frame: frame - startTime - delay - 20,
+              frame: frame - startTime - delay - translateDelay,
               fps,
               config: {
                 damping: 10, // Controls bounciness
