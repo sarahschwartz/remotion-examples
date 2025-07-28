@@ -5,6 +5,9 @@ import { ShortsVertical } from "./ShortsVertical";
 import { SSO } from "./SSO";
 import { SSOCronos } from "./SSOCronos";
 import { ZKGame } from "./ZKGame";
+// import { ZKSlido } from "./zk-slido";
+import { Solx } from "./solx";
+import { ZKArch } from "./ZK-Architecture";
 
 export const RemotionRoot = () => {
   const shortMin = 0;
@@ -18,6 +21,15 @@ export const RemotionRoot = () => {
 
   const gameMin = 0;
   const gameSeconds = (60 * gameMin) + 57;
+  
+  // const slidoMin = 0;
+  // const slidoSeconds = (60 * slidoMin) + 59;
+
+  const solxMin = 2;
+  const solxSeconds = (60 * solxMin) + 29;
+
+  const zkArchMin = 4;
+  const zkArcSeconds = (60 * zkArchMin) + 32;
 
   return (
     <div>
@@ -49,6 +61,31 @@ export const RemotionRoot = () => {
         id="SSOCronos"
         component={SSOCronos}
         durationInFrames={FPS * ssoCronosSeconds}
+        fps={FPS}
+        width={1920}
+        height={1080}
+      />
+      
+      {/* <Composition
+        id="ZKSlido"
+        component={ZKSlido}
+        durationInFrames={FPS * slidoSeconds}
+        fps={FPS}
+        width={1920}
+        height={1080}
+      /> */}
+      <Composition
+        id="Solx"
+        component={Solx}
+        durationInFrames={FPS * solxSeconds}
+        fps={FPS}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="zkArcSeconds"
+        component={ZKArch}
+        durationInFrames={FPS * zkArcSeconds}
         fps={FPS}
         width={1920}
         height={1080}

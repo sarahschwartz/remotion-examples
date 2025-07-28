@@ -5,6 +5,11 @@
 
 import { Config } from "@remotion/cli/config"
 import { myTheme } from "./customTheme"
+ 
+// transparent background
+// Config.setVideoImageFormat("png");
+// Config.setPixelFormat("yuva420p");
+// Config.setCodec("vp8");
 
 const chConfig = {
   syntaxHighlighting: {

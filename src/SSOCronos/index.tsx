@@ -5,7 +5,6 @@ import {
   staticFile,
   useCurrentFrame,
   useVideoConfig,
-  Video,
 } from "remotion";
 import { FPSFactor } from "../constants";
 import { Arch } from "./Arch";
@@ -19,7 +18,6 @@ import { Verified } from "./Verified";
 import { Sessions } from "./Sessions";
 import { SessionReview } from "./SessionReview";
 import SSOCode from "../CodeHike/sso";
-import { SSO } from "../SSO";
 
 export const SSOCronos = () => {
   const frame = useCurrentFrame();
